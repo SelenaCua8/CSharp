@@ -1,0 +1,36 @@
+﻿using System;
+
+namespace Clases
+{
+    class Humano
+    {
+        public string primerNombre;
+        public string apellido;
+
+        // Método constructor
+        public Humano(string miPrimerNombre, string miApellido)
+        {
+            primerNombre = miPrimerNombre;
+            apellido = miApellido;
+        }
+
+        public void presentarme()
+        {
+            Console.WriteLine($"Hola, mi nombre es {primerNombre} {apellido}");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Humano laura = new Humano("Laura", "Lopez");
+            Humano franco = new Humano("Franco", "Milani");
+
+            laura.presentarme();
+            franco.presentarme();
+
+            Console.Read();
+        }
+    }
+}
